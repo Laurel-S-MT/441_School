@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+  background-color: #0f172a;
+  font-family: 'Playfair Display', serif;
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game {
+  background-color: #020617;
+  padding: 20px;
+  border-radius: 12px;
+  width: 420px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #22c55e;
+  color: #022c22;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #16a34a;
+}
