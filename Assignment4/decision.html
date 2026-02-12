@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <label>Enter a temperature:</label><br>
+    <input id="tempInput" type="number"><br>
+    <button onclick="makeDecision();">Decide</button>
+
+    <div id="output"></div>
+
+    <script>
+      function makeDecision() {
+
+     var temp =
+  document.getElementById("tempInput").value;
+
+var message = "";
+
+if (temp < 40) {
+  message = "It's cold outside.";
+} else {
+  message = "It's nice out!";
+}
+
+
+document.getElementById("output").innerHTML = message;
+
+
+
+ console.log(temp); 
+
+      }
+    </script>
+
+  </body>
+ 
+</html>

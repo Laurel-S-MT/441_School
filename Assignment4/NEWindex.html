@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Adventure</title>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #088da5;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #edf3ff;
+    }
+
+    p {
+      color: #050505;
+    }
+
+
+  </style>
+  </head>
+
+ <script>
+      // I am defining my method here
+      function theDoWhileLoop() {
+        shouldWeContinue = false;
+
+        do {
+          document.write("<ol>");
+          document.write("<li>Magpies Tresure Hunt</li>");
+          document.write("<li>Load Game</li>");
+         
+          document.write("</ol>");
+        } while (shouldWeContinue);
+      }
+    </script>
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+        function getChoice1() 
+        {
+            var myChoice = document.getElementById("choice").value;
+            var myQuestion = document.getElementById("question");
+            if(myChoice === "Wildflowers")
+            {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("choice2").style.display="block";
+                document.getElementById("btnSubmit2").style.display="block";
+                
+
+                myQuestion.innerHTML = "Good choice! But what tone of colors should he choose? Cool colors or warm colors?";
+            }
+            else if(myChoice === "Ribbons")
+            {
+                document.getElementById("mainImage").src = "ribbons.avif"
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("choice3").style.display="block";
+                document.getElementById("btnSubmit3").style.display="block";
+                myQuestion.innerHTML = "Looks like some children tied a variety of them to the branches. Which kind should he go for? Satin or lace?";
+
+            }
+            else
+            {
+                myQuestion.innerHTML = "Invalid answer";
+            }
+        
+        }
+        function getChoice2()
+{
+    var answer = document.getElementById("choice2").value;
+    var myQuestion = document.getElementById("question");
+
+    if(answer.toLowerCase() === "cool colors" || 
+       answer.toLowerCase() === "warm colors")
+    {
+        document.getElementById("mainImage").src = "flying.jpg";
+        myQuestion.innerHTML = "Good choice! It's time to head home!";
+
+        // HIDE choice2
+        document.getElementById("choice2").style.display="none";
+        document.getElementById("btnSubmit2").style.display="none";
+
+        // SHOW choice4
+        document.getElementById("choice4").style.display="block";
+        document.getElementById("btnSubmit4").style.display="block";
+    }
+            
+        }
+
+       function getChoice3()
+{
+    var answer = document.getElementById("choice3").value;
+    var myQuestion = document.getElementById("question");
+
+    if(answer.toLowerCase() === "satin" || 
+       answer.toLowerCase() === "lace")
+    {
+        document.getElementById("mainImage").src = "flying.jpg";
+        myQuestion.innerHTML = "Good choice! It's time to head home!";
+
+        // HIDE choice3
+        document.getElementById("choice3").style.display="none";
+        document.getElementById("btnSubmit3").style.display="none";
+
+        // SHOW choice4
+        document.getElementById("choice4").style.display="block";
+        document.getElementById("btnSubmit4").style.display="block";
+    }
+}
+
+           function getChoice4() //blue
+        {
+            var answer = document.getElementById("choice4").value;
+            var myQuestion = document.getElementById("question");
+            if(answer.toLowerCase() === "fly home")
+            {
+                document.getElementById("mainImage").src = "pair.jpg"
+                myQuestion.innerHTML = "Yay! His mate seems happy with the decor!";
+            }
+           
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+    <body>
+
+
+ <script>
+      theDoWhileLoop(); // remember I am calling my method here
+    </script>
+
+
+
+<h1>Magpie Treasure Hunt</h1>
+        <br>
+        <img src="Black Billed Magpie.jpg" id="mainImage">
+    <div id="question">
+    <br>
+        This Magpie wants to spruce up the nest as a suprise for his mate.
+        <br>
+       Lets go fly the countryside and see what he can find.
+       <br>
+       What does he see first? Wildflowers or ribbons? 
+       <br>
+       (Case sensitive for the first choice)
+    </div>
+       
+        <br>
+        <input type="text" size="30" id="choice" placeholder="Please enter Wildflowers or Ribbons">
+        <button id="btnSubmit" onclick="getChoice1();">Click to continue</button>
+
+        <input type="text" size="30" id="choice2" placeholder="Enter Cool colors or warm colors." style="display:none">
+        <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice3" placeholder="Enter satin or lace."  style="display:none">
+        <button id="btnSubmit3" onclick="getChoice3();" style="display:none">Click to continue</button>
+
+         <input type="text" size="30" id="choice4" placeholder="Enter fly home."  style="display:none">
+        <button id="btnSubmit4" onclick="getChoice4();" style="display:none">Click to continue</button>
+
+       
+  
+
+    </body>
+
+</html>

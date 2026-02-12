@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Adventure</title>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #088da5;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #edf3ff;
+    }
+
+    p {
+      color: #050505;
+    }
+  </style>
+  </head>
+
+ 
+<script>
+        function getChoice1()
+        {
+            var myChoice = document.getElementById("choice").value;
+            var myQuestion = document.getElementById("question");
+            if(myChoice === "colorful things") //green choice
+            {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("choice2").style.display="block";
+                document.getElementById("btnSubmit2").style.display="block";
+                
+
+                myQuestion.innerHTML = "Lets fly to the countryside! What catches his eye? wildflowers or ribbons?";
+            }
+            else if(myChoice === "shiny things") //blue choice
+            {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("choice3").style.display="block";
+                document.getElementById("btnSubmit3").style.display="block";
+                myQuestion.innerHTML = "Lets fly over to the town! What catches his eye? pearl necklace or golden tassel?";
+
+            }
+            else
+            {
+                myQuestion.innerHTML = "Invalid answer";
+            }
+        
+        }
+        function getChoice2() //green
+        {
+            var answer = document.getElementById("choice2").value;
+            var myQuestion = document.getElementById("question");
+            if(answer.toLowerCase() === "wildflowers")
+          {
+    document.getElementById("mainImage").src = "flowers.jpg";
+    myQuestion.innerHTML = "Good choice! But what tone of colors should he choose? cool colors or warm colors?";
+    
+    document.getElementById("choice4").style.display="block";
+    document.getElementById("btnSubmit4").style.display="block";
+        }
+            else if(answer.toLowerCase() === "ribbons")
+            {
+                myQuestion.innerHTML = "Looks like some children tied a variety of them to the branches. Which kind should he go for? satin or lace?";
+                document.getElementById("mainImage").src = "ribbons.avif"
+            }
+        }
+
+        function getChoice3() //blue 
+        {
+            var answer = document.getElementById("choice3").value;
+            var myQuestion = document.getElementById("question");
+            if(answer.toLowerCase() === "pearl necklace")
+            {
+                document.getElementById("mainImage").src = "pearls.png"
+                myQuestion.innerHTML = "Pearls will look lovely! It's time to head home! Type in 'fly home'";
+            }
+            else if(answer.toLowerCase() === "golden tassel")
+            {
+             document.getElementById("mainImage").src = "gold.jpg"
+              myQuestion.innerHTML = "Ah yes, gold will suit the nest nicely. It's time to head home! Type in 'fly home'";
+            }
+        }
+
+ function getChoice4() //green
+        {
+            var answer = document.getElementById("choice4").value;
+            var myQuestion = document.getElementById("question");
+            if(answer.toLowerCase() === "warm colors")
+        {
+    document.getElementById("mainImage").src = "flowers.jpg";
+    myQuestion.innerHTML = "Good choice! It's time to head home! Type in 'fly home'";
+    
+    document.getElementById("choice6").style.display="block";
+    document.getElementById("btnSubmit6").style.display="block";
+    }
+            else if(answer.toLowerCase() === "cool colors")
+           {
+    document.getElementById("mainImage").src = "flowers.jpg";
+    myQuestion.innerHTML = "Good choice! It's time to head home! Type in 'fly home'";
+    
+    document.getElementById("choice6").style.display="block";
+    document.getElementById("btnSubmit6").style.display="block";
+    }
+
+        }
+
+
+
+        
+
+function getChoice6() //green
+      {
+    var answer = document.getElementById("choice4").value;
+    var myQuestion = document.getElementById("question");
+
+    if(answer.toLowerCase() === "fly home")
+    {
+        document.getElementById("mainImage").src = "pair.jpg";
+        myQuestion.innerHTML = "Yay! His mate seems happy with the decor!";
+    }
+    else
+    {
+        myQuestion.innerHTML = "Type 'fly home' to finish the adventure!";
+    }
+}
+
+
+
+
+
+
+    </script>
+    <body>
+
+        <h1>Magpie Treasure Hunt</h1>
+        <br>
+        <img src="Black Billed Magpie.jpg" id="mainImage">
+    <div id="question">
+    <br>
+        This Magpie wants to spruce up the nest as a suprise for his mate.
+        <br>
+        What should he look for?
+        <br>
+        shiny things or colorful things? 
+     
+        
+    </div>
+       
+        <br>
+        <input type="text" size="30" id="choice" value="Type shiny things or colorful things">
+        <button id="btnSubmit" onclick="getChoice1();">Click to continue</button>
+
+        <input type="text" size="30" id="choice2" value="" style="display:none">
+        <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice3" value=""  style="display:none">
+        <button id="btnSubmit3" onclick="getChoice3();" style="display:none">Click to continue</button>
+
+            <input type="text" size="30" id="choice4" value="" style="display:none">
+        <button id="btnSubmit4" onclick="getChoice4();"  style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice5" value=""  style="display:none">
+        <button id="btnSubmit5" onclick="getChoice5();" style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice6" value=""  style="display:none">
+        <button id="btnSubmit6" onclick="getChoice6();" style="display:none">Click to continue</button>
+
+    </body>
+
+
+    
+
+</html>

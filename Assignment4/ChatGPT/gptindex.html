@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adventure Story</title>
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #story {
+            margin: 20px;
+            font-size: 20px;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌟 The Lost Treasure Adventure 🌟</h1>
+
+    <img id="storyImage" src="https://via.placeholder.com/300x200">
+
+    <div id="story">Type "start" to begin your adventure.</div>
+
+    <input type="text" id="userInput" placeholder="Enter your choice">
+    <button onclick="handleInput()">Submit</button>
+
+<script>
+
+let stage = 0;
+let playing = true;
+
+// Function that returns formatted text
+function formatText(text) {
+    return text.toUpperCase();
+}
+
+// Function that changes background and image
+function updateScene(color, imageUrl) {
+    document.body.style.backgroundColor = color;
+    document.getElementById("storyImage").src = imageUrl;
+}
+
+// Function to restart story
+function restartStory() {
+    stage = 0;
+    playing = true;
+    document.getElementById("story").innerHTML =
+        "Type 'start' to begin your adventure.";
+    updateScene("lightblue", "https://via.placeholder.com/300x200");
+}
+
+// Main function that handles input
+function handleInput() {
+
+    let input = document.getElementById("userInput").value.toLowerCase();
+    document.getElementById("userInput").value = "";
+
+    if (!playing) {
+        if (input === "yes") {
+            restartStory();
+        } else {
+            document.getElementById("story").innerHTML =
+                "Refresh the page if you change your mind!";
+        }
+        return;
+    }
+
+    if (stage === 0 && input === "start") {
+        stage = 1;
+        document.getElementById("story").innerHTML =
+            "You're at a crossroads. Go left or right?";
+        updateScene("lightgreen", "https://via.placeholder.com/300x200?text=Crossroads");
+    }
+
+    else if (stage === 1) {
+        if (input === "left") {
+            stage = 2;
+            document.getElementById("story").innerHTML =
+                "You find a river. Swim or build a raft?";
+            updateScene("lightblue", "https://via.placeholder.com/300x200?text=River");
+        }
+        else if (input === "right") {
+            stage = 3;
+            document.getElementById("story").innerHTML =
+                "You meet a dragon! Fight or run?";
+            updateScene("orange", "https://via.placeholder.com/300x200?text=Dragon");
+        }
+    }
+
+    else if (stage === 2) {
+        if (input === "swim") {
+            endGame("You were eaten by a crocodile 🐊");
+        }
+        else if (input === "build a raft") {
+            endGame("You safely cross and find the treasure! 💰");
+        }
+    }
+
+    else if (stage === 3) {
+        if (input === "fight") {
+            endGame("The dragon defeats you 🔥");
+        }
+        else if (input === "run") {
+            endGame("You escape and find a treasure chest! 🎉");
+        }
+    }
+}
+
+// Ending function using loop
+function endGame(message) {
+
+    playing = false;
+
+    let dots = "";
+    let count = 0;
+
+    while (count < 3) {
+        dots += ".";
+        count++;
+    }
+
+    document.getElementById("story").innerHTML =
+        formatText(message) + dots +
+        "<br><br>Do you want to start again? (yes/no)";
+}
+
+</script>
+
+</body>
+</html>
