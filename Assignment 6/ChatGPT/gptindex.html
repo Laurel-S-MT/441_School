@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Memory Game - Week 1</title>
+
+<style>
+  #board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Memory Game</h2>
+<div id="board"></div>
+
+<script>
+
+// -----------------------------
+// ARRAY SETUP
+// -----------------------------
+
+// blank images (size 12)
+var blankImages = [];
+for (var i = 0; i < 12; i++) {
+  blankImages.push("images/blank.png");
+}
+
+// actual images (6 pairs = 12 total)
+var actualImages = [
+  "images/img1.png",
+  "images/img1.png",
+
+  "images/img2.png",
+  "images/img2.png",
+
+  "images/img3.png",
+  "images/img3.png",
+
+  "images/img4.png",
+  "images/img4.png",
+
+  "images/img5.png",
+  "images/img5.png",
+
+  "images/img6.png",
+  "images/img6.png"
+];
+
+
+// -----------------------------
+// RANDOMIZE IMAGE ORDER
+// -----------------------------
+
+function shuffle(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
+shuffle(actualImages);
+
+
+// -----------------------------
+// DISPLAY BOARD USING LOOP
+// -----------------------------
+
+var board = document.getElementById("board");
+
+for (let i = 0; i < 12; i++) {
+
+  var tile = document.createElement("img");
+
+  tile.src = blankImages[i];
+
+  tile.onclick = function() {
+    revealImage(i);
+  };
+
+  board.appendChild(tile);
+}
+
+
+// -----------------------------
+// REVEAL IMAGE WHEN CLICKED
+// -----------------------------
+
+function revealImage(index) {
+  var allTiles = document.querySelectorAll("#board img");
+
+  allTiles[index].src = actualImages[index];
+}
+
+</script>
+
+</body>
+</html>

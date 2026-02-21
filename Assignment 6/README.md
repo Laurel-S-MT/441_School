@@ -1,0 +1,3 @@
+# 441_School
+For this week, AI's version isnt too different from what I can guess as it didnt provide any picures; I guess expecting me to choose the picture on my own. From the web developer tools it seems to act functional when I do click on a box where an image should be in. Only providing the error about the images.
+While working on my own project, gpt was really into suggesting to use the function of "shuffling" and seems to have implemented it into their own. I didnt use it in my own as the images shuffle after refresh.
