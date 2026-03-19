@@ -1,0 +1,51 @@
+   #square {
+      width: 100px;
+      height: 100px;
+      background: rgb(0, 255, 13);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+ 
+
+    #circle {
+  height: 100px; /* Set the height */
+  width: 100px;  /* Set the width to the same value as height for a perfect circle */
+  background-color: #ff49e7; /* Add a background color for visibility */
+  border-radius: 50%; /* This property transforms the square into a circle*/
+
+ position: absolute;
+      left: 0;
+      top: 0;
+
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent; /* Transparent left border */
+  border-right: 50px solid transparent; /* Transparent right border */
+  border-bottom: 100px solid #f03d1d; /* Colored bottom border forms the triangle */
+
+ position: absolute;
+      left: 0;
+      top: 0;
+
+
+}
+
+
+    .stuff{
+      background: rgb(255, 0, 85);
+      color:white;
+    }
+
+    #third{
+      background: rgb(211, 207, 7);
+      color:white;
+    }
+
+    body{
+        background-color: rgb(30, 140, 148);
+    }

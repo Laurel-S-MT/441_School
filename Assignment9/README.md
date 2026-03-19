@@ -1,0 +1,2 @@
+# 441_School
+ This was a bit of a difficult assignment to me, for some odd reason it wasnt really clicking with me so I had to rely a lot on refrences from homework examples and work out issues with GPT when I couldnt find the bugs and also use it as another form of reference. Mainly on how to add in more images and fix the buttons-to the best of my ability-I do wish I could've done more on the animations and code without having to rely on it so much. But I will admit it is a handy tool to have from time to time.
