@@ -1,0 +1,49 @@
+<CATALOG>
+    <CD>
+        <BIRD>Black Billed Magpie</BIRD>
+        <PHOTOGRAPHER>Laurel Schmidt</PHOTOGRAPHER>
+        <COUNTRY>USA</COUNTRY>
+        <STATE>Montana</STATE>
+        <MONTH>December</MONTH>
+    </CD>
+    <CD>
+        <BIRD>Red Winged Blackbird</BIRD>
+        <PHOTOGRAPHER>Quinn Whitman</PHOTOGRAPHER>
+        <COUNTRY>USA</COUNTRY>
+        <STATE>Montana</STATE>
+        <MONTH>May</MONTH>
+    </CD>
+    <CD>
+        <BIRD>American Robin</BIRD>
+        <PHOTOGRAPHER>Derek Reed</PHOTOGRAPHER>
+        <COUNTRY>USA</COUNTRY>
+        <STATE>Montana</STATE>
+        <MONTH>June</MONTH>
+    </CD>
+    <CD>
+        <BIRD>Red Tail Hawk</BIRD>
+        <PHOTOGRAPHER>Marco Vittore</PHOTOGRAPHER>
+        <COUNTRY>USA</COUNTRY>
+        <STATE>Montana</STATE>
+        <MONTH>June</MONTH>
+    </CD>
+
+      <CD>
+        <BIRD>Downy Woodpecker</BIRD>
+        <PHOTOGRAPHER>Temple Belanger</PHOTOGRAPHER>
+        <COUNTRY>USA</COUNTRY>
+        <STATE>Montana</STATE>
+        <MONTH>December</MONTH>
+    </CD>
+
+      <CD>
+        <BIRD>Great Blue Heron</BIRD>
+        <PHOTOGRAPHER>Fort Belanger</PHOTOGRAPHER>
+        <COUNTRY>USA</COUNTRY>
+        <STATE>Montana</STATE>
+        <MONTH>May</MONTH>
+    </CD>
+
+   
+
+</CATALOG>
