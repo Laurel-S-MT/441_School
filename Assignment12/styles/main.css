@@ -1,0 +1,14 @@
+canvas{
+  background-color: rgb(255, 255, 249);
+}
+
+
+    body{
+        background-color: rgb(30, 140, 148);
+    }
+
+    #myCanvas{
+        border: black;
+        border-style: solid;
+        border-width: 2px;
+    }
