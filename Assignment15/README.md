@@ -1,0 +1,7 @@
+Personally for me, 2D is easier to load/create objects but difficult to position the object within the canvas. I need certain codes and I forget what they are unfortunately. 3D is complicated to load/create objects but easier to position them. There’s also a lot more to add into code in the 3d space than 2ds simple lines of code.
+
+I think the most difficult thing in this project was inserting the OBJ model in the code; it wasn't working with the class instructions. The code seemed to have worked but the model wouldn't appear-even with the help of ai to help me debug what was wrong. (It was also kind of the same with inserting the text.) The model eventually appeared after adding in the “child” codes. I’m still having trouble with the lighting/shading to better define the model but I’m afraid of breaking it again.
+
+I was mainly just trying to meet the credentials and learn how to use this three.js feature but I also wanted to be silly with this one; showcasing my first attempt at modeling in blender with the bird like creature I made for coding 2
+
+Definitely fix the lighting so the model can be more defined and add rotation to it. Maybe even add more shapes around the border. Also orientation of the model; I’m pretty sure he’s upside down.
